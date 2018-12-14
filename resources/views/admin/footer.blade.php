@@ -1,11 +1,15 @@
-    <div class="footer-copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2018. todos los derechos reservados   <a href="https://macsoftins.com">m@c-softins</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                <footer class="footer hidden-xs-down">
+                    <p>© Super Admin Responsive. All rights reserved.</p>
+
+                    <ul class="nav footer__nav">
+                        <a class="nav-link" href="">Homepage</a>
+
+                        <a class="nav-link" href="">Company</a>
+
+                        <a class="nav-link" href="">Support</a>
+
+                        <a class="nav-link" href="">News</a>
+
+                        <a class="nav-link" href="">Contacts</a>
+                    </ul>
+                </footer>
