@@ -17,7 +17,7 @@ class Personas extends Migration
             $table->increments('id');
 
             $table->string('ci')->unique();
-            $table->enum('extension', ['LP', 'OR', 'PT', 'CB', 'SC', 'BN', 'PA', 'TJ', 'CH'])->default('BN');
+            $table->enum('extension', ['LP', 'OR', 'PT', 'CB', 'SC', 'BN', 'PA', 'TJ', 'CH'])->default('PT');
             $table->string('nombres')->nullable();
             $table->string('apellidos')->nullable();
             $table->enum('genero', ['masculino', 'femenino'])->default('masculino');
