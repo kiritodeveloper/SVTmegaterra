@@ -1,8 +1,7 @@
 <header class="header">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {!! $map['js'] !!}
-        <div class="navigation-trigger hidden-xl-up" data-sa-action="aside-open" data-sa-target=".sidebar">
+             <div class="navigation-trigger hidden-xl-up" data-sa-action="aside-open" data-sa-target=".sidebar">
             <i class="zmdi zmdi-menu"></i>
         </div>
 

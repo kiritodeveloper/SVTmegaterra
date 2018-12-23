@@ -11,28 +11,24 @@
 |
 */
 
-
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin',function(){
-    return view('admin.dashboard');
+Route::get('/', function () {
+    return redirect(route('dashboard'));
 });
 
+Route::group(['middleware'=>'auth'],function (){
+    /*
+    |--------------------------------------------------------------------------
+    | Dashboard
+    |--------------------------------------------------------------------------
+    */
+    Route::get('dashboard','HomeController@index')->name('dashboard');
 
-Route::any('admin1',function() {
-    return view('admin.sidebarc');
+
 });
-Route::get('/map', 'MapController@index');
-
-Route::get('/map', function(){
-    $config = array();
-    $config['center'] = 'New York, USA';
-    GMaps::initialize($config);
-    $map = GMaps::create_map();
-
-    echo $map['js'];
-    echo $map['html'];
+Route::get('/map',function(){
+    return view('map.map');
 });
+
