@@ -32,12 +32,12 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Dashboard</a>
+                    <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Inicio</a>
                     </li>
-                    <li><a><i class="fa fa-cogs"></i>Settings <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-cogs"></i>Administracion <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="/map">Role Managment</a></li>
-                            <li><a href="{{route('register')}}" class="to_register"> Create Account </a></li>
+                            <li><a href="/map">Registro De Terrenos</a></li>
+                            <li><a href="/usuarios" class="to_register"> Usuarios </a></li>
                         </ul>
                     </li>
                 </ul>
