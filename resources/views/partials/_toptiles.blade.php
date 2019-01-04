@@ -1,4 +1,4 @@
-<div class="row top_tiles" style="opacity: 0.5;" >
+<div class="row top_tiles" >
     <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <div class="tile-stats">
             <div class="icon"><i class="fa fa-users"></i></div>
