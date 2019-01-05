@@ -1,21 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'Usuarios')
+@section('title', 'Lista De Usuarios')
 
 @section('content')
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="x_panel">
             <div class="x_title">
-                 <h1 class="pb-1">{{ $title }}</h1>
-                    <p>
-                        <a href="{{ route('users.create') }}" class="btn btn-round btn-info">+ Usuario</a>
-                    </p>
                 <div class="clearfix">
                     @if ($users->isNotEmpty())
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
-                        <tr>
+                        <tr style="color: #000;">
                             <th scope="col">n</th>
                             <th scope="col">Nombre Completo</th>
                             <th scope="col">Correo</th>
@@ -25,9 +21,9 @@
                         <tbody>
                         @foreach($users as $user)
                         <tr>
-                            <th scope="row">{{ $user->id }}</th>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
+                            <th scope="row" style="color: #000;" >{{ $user->id }}</th>
+                            <td style="color: #000;">{{ $user->name }}</td>
+                            <td style="color: #000;">{{ $user->email }}</td>
                             <td>
                                 <form action="{{ route('users.destroy', $user) }}" method="POST">
                                     {{ csrf_field() }}

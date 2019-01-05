@@ -55,3 +55,11 @@ Route::put('/usuarios/{user}', 'UserController@update');
 Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController');
 
 Route::delete('/usuarios/{user}', 'UserController@destroy')->name('users.destroy');
+
+
+Route::get('/cliente',function(){
+    return view('clientes.index');
+});
+Route::get('/RegistroClientes',function(){
+    return view('clientes.create');
+});

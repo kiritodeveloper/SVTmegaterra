@@ -170,6 +170,4 @@
 
 </script>
 
-
-    @include('partials._toptiles')
 @endsection

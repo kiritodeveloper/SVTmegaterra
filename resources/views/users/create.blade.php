@@ -35,7 +35,6 @@
                 </div>
 
                 <button type="submit" class="btn btn-round btn-success">Crear usuario</button>
-                <a href="{{ route('users.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
             </form>
         </div>
         </div>

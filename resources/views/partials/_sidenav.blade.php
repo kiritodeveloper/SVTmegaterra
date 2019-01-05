@@ -37,7 +37,12 @@
                     <li><a><i class="fa fa-cogs"></i>Administracion <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="/map">Registro De Terrenos</a></li>
-                            <li><a href="/usuarios" class="to_register"> Usuarios </a></li>
+                            <li><a href="/usuarios"> Listar Usuarios</a></li>
+                            <li><a href="{{ route('users.create') }}"> Registrar Usuarios Usuarios</a></li>
+                            <li><a href="/cliente">lista de clientes</a></li>
+                            <li><a href="/RegistroClientes">Resgistro De Clientes</a></li>
+                            <li><a href="#">Resgistro De Planes</a></li>
+                            <li><a href="#">Lista De Planes</a></li>
                         </ul>
                     </li>
                 </ul>
