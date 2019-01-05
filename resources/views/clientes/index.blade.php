@@ -21,7 +21,7 @@
                         <div class="x_panel">
                                 <div class="x_title">
                                   <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
                                     </li>
                                   </ul>
                                   <div class="clearfix"></div>
@@ -35,9 +35,12 @@
                                     <div class="desc">DIRECCION{{ $cliente->direccion }}</div>
                                     <div class="desc">TELEFONO{{ $cliente->telefono }}</div>
                                 </div>
+
                               </div>
                     <div class="bottom">
-
+                           <a href="#" class="btn btn-round btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a>
+                           <a href="#" class="btn btn-round btn-success"><span class="glyphicon glyphicon-edit"></span></a>
+                           <a href="#" class="btn btn-round btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
                     </div>
                 </div>
     
