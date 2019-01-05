@@ -14023,7 +14023,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
   font-size: 12px;
   line-height: 16px;
   color: #737373;
-  text-overflow: ellipsis;
+  text-overflow: clip;
 }
 
 .card.people .card-bottom {

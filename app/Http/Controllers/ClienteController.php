@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\cliente;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 class ClienteController extends Controller
 {
     /**
@@ -13,7 +15,11 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //
+        //$clientes = DB::table('cliente')->get();
+        $clientes = Cliente::all();
+        //dd($clientes);
+        $title = 'Listado de clientes';
+        return view('clientes.index', compact('title', 'clientes'));
     }
 
     /**
@@ -23,7 +29,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -32,9 +38,20 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $data = request()->all();
+        Cliente::create([
+            'ci' => $data['ci'],
+            'nombre' => $data['nombre'],
+            'apellidos'=> $data['apellidos'],
+            'genero'=>$data['genero'],
+            'fecha_nacimiento'=>$data['fecha_nacimiento'],
+            'estado_civil'=>$data['estado_civil'],
+            'direccion'=> $data['direccion'],
+            'telefono'=> $data['telefono']
+        ]);
+        
     }
 
     /**
@@ -45,7 +62,8 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        //
+        //dd(compact('cliente'));
+        return view('clientes.show', compact('cliente'));
     }
 
     /**
