@@ -71,4 +71,8 @@ Route::group(['middleware'=>'auth'],function (){
     Route::get('/cli/nuevo', 'ClienteController@create')->name('clientes.create');
     
     Route::post('/cli/crear','ClienteController@store');
+
+    Route::get('/cli/{cliente}/editar', 'ClienteController@edit')->name('clientes.edit');
+
+    Route::delete('/cli/{clientes}', 'ClienteController@destroy')->name('clientes.destroy');
 });

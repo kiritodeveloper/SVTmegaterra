@@ -73,9 +73,9 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cliente $clientes)
     {
-        //
+        return view('clientes.edit', ['cliente' => $clientes]);
     }
 
     /**
@@ -96,8 +96,9 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Cliente $clientes)
     {
-        //
+        $clientes->delete();
+        return redirect()->route('clientes.index');
     }
 }
