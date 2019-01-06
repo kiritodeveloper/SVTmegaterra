@@ -40,7 +40,7 @@
                             <li><a href="/usuarios"> Listar Usuarios</a></li>
                             <li><a href="{{ route('users.create') }}"> Registrar Usuarios</a></li>
                             <li><a href="/cli">lista de clientes</a></li>
-                            <li><a href="/RegistroClientes">Resgistro De Clientes</a></li>
+                            <li><a href="/cli/nuevo">Resgistro De Clientes</a></li>
                             <li><a href="#">Resgistro De Planes</a></li>
                             <li><a href="#">Lista De Planes</a></li>
                         </ul>

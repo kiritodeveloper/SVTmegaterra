@@ -30,10 +30,10 @@
                                                             
                                     <div class="desc">CI: {{ $cliente->ci }}</div>
                                     <div class="desc">GENERO: {{ $cliente->genero }}</div>
-                                    <div class="desc">NACIDO EL {{ $cliente->fecha_nacimiento }}</div>
-                                    <div class="desc">ESTADO CIVIL{{ $cliente->estado_civil }}</div>
-                                    <div class="desc">DIRECCION{{ $cliente->direccion }}</div>
-                                    <div class="desc">TELEFONO{{ $cliente->telefono }}</div>
+                                    <div class="desc">NACIDO EL: {{ $cliente->fecha_nacimiento }}</div>
+                                    <div class="desc">ESTADO CIVIL:{{ $cliente->estado_civil }}</div>
+                                    <div class="desc">DIRECCION:{{ $cliente->direccion }}</div>
+                                    <div class="desc">TELEFONO:{{ $cliente->telefono }}</div>
                                 </div>
 
                               </div>

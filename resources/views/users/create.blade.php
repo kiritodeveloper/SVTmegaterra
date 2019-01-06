@@ -2,9 +2,9 @@
 @section('title', "Crear usuario")
 
 @section('content')
-    <div class="card">
-        <div class="card-body">
-
+<div class="col-md-6 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <h6>Por favor corrige los errores debajo:</h6>
@@ -15,7 +15,6 @@
                     </ul>
                 </div>
             @endif
-            <div class="x_panel">
             <form method="POST" action="{{ url('usuarios') }}"  >
                 {{ csrf_field() }}
 

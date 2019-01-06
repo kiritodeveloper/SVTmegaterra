@@ -29,7 +29,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        return view('clientes.create');
     }
 
     /**
@@ -43,15 +43,16 @@ class ClienteController extends Controller
         $data = request()->all();
         Cliente::create([
             'ci' => $data['ci'],
-            'nombre' => $data['nombre'],
+            'nombre'=> $data['nombre'],
             'apellidos'=> $data['apellidos'],
-            'genero'=>$data['genero'],
-            'fecha_nacimiento'=>$data['fecha_nacimiento'],
-            'estado_civil'=>$data['estado_civil'],
+            'genero'=> $data['genero'],
+            'fecha_nacimiento'=> $data['fecha_nacimiento'],
+            'estado_civil'=> $data['estado_civil'],
             'direccion'=> $data['direccion'],
-            'telefono'=> $data['telefono']
+            'telefono'=> $data['telefono'],
         ]);
-        
+
+        return redirect()->route('clientes.index');
     }
 
     /**
