@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\cliente;
+use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
@@ -38,8 +39,8 @@ class ClienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {
+    public function store(Request $request)
+    {   
         $data = request()->all();
         Cliente::create([
             'ci' => $data['ci'],
@@ -50,8 +51,8 @@ class ClienteController extends Controller
             'estado_civil'=> $data['estado_civil'],
             'direccion'=> $data['direccion'],
             'telefono'=> $data['telefono'],
+            'avatar'=>$data['avatar'],
         ]);
-
         return redirect()->route('clientes.index');
     }
 

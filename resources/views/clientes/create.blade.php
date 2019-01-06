@@ -51,7 +51,10 @@
                     <option value="divorciad@">divorciad@</option>
                     <option value="viud@">viud@</option>
                 </select>
+                
+                <input type="file" name="avatar" id="default">
             </div>
+
             <button type="submit" class="btn btn-round btn-success">Registrar Cliente</button>
         </form>
         </div>

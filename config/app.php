@@ -169,6 +169,7 @@ return [
          */
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
 
         /*
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 

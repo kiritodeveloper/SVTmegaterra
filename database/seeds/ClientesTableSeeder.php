@@ -19,7 +19,8 @@ class ClientesTableSeeder extends Seeder
             'fecha_nacimiento'=>'1990-01-05',
             'estado_civil'=>'soltero',
             'direccion'=>'direccion',
-            'telefono'=>'telefono'
+            'telefono'=>'telefono',
+            'avatar'=>'default.jpg'
         ]);
         DB::table('clientes')->insert([
             'ci' => '854562185',
@@ -29,7 +30,9 @@ class ClientesTableSeeder extends Seeder
             'fecha_nacimiento'=>'1991-01-05',
             'estado_civil'=>'casado',
             'direccion'=>'america 485',
-            'telefono'=>'67916774'
+            'telefono'=>'67916774',
+            'avatar'=>'default.jpg'
+
         ]);
     }
 }

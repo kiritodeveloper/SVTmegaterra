@@ -10,7 +10,7 @@
     
                     </div>
                     <div class="avatar">
-                        <img alt="" src="images/img.jpg">
+                        <img alt="" src="/uploads/avatars/{{ $cliente->avatar }}">
                     </div>
                     <div class="info">
                         <div class="title">
