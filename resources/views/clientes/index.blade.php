@@ -42,9 +42,8 @@
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-round btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-                                </form>
-                           <a href="#" class="btn btn-round btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a>
-                           <a href="{{ route('clientes.edit', $cliente) }}" class="btn btn-round btn-success"><span class="glyphicon glyphicon-edit"></span></a>
+                                    <a href="{{ route('clientes.edit', $cliente) }}" class="btn btn-round btn-success"><span class="glyphicon glyphicon-edit"></span></a>
+                                </form>                           
                     </div>
                 </div>
     
