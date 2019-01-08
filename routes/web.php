@@ -86,5 +86,14 @@ Route::group(['middleware'=>'auth'],function (){
 });
 
 Route::get('/proyecto','ProyectoController@index')->name('proyecto.index');
+Route::get('/proyecto/nuevo', 'ProyectoController@create')->name('proyecto.create');
+    
+Route::post('/proyecto/crear','ProyectoController@store');
+
 
 Route::get('/tipo','TipoController@index')->name('tipo.index');
+
+Route::get('/tipo/nuevo', 'TipoController@create')->name('tipo.create');
+    
+Route::post('/tipo/crear','TipoController@store');
+Route::delete('/tipo/{tipos}', 'TipoController@destroy')->name('tipos.destroy');

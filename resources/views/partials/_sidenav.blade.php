@@ -34,15 +34,32 @@
                 <ul class="nav side-menu">
                     <!--<li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Inicio</a>
                     </li>-->
-                    <li><a><i class="fa fa-cogs"></i>Administracion <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa fa-group"></i> Administracion <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="/map">Registro De Terrenos</a></li>
+                            <li><a href="/cli/nuevo">Registro De Clientes</a></li>
+                            <li><a href="/usuarios/nuevo"> Registro De Usuarios</a></li>
                             <li><a href="/usuarios"> Listar Usuarios</a></li>
-                            <li><a href="{{ route('users.create') }}"> Registrar Usuarios</a></li>
-                            <li><a href="/cli">lista de clientes</a></li>
-                            <li><a href="/cli/nuevo">Resgistro De Clientes</a></li>
+                            <li><a href="/cli">Lista de clientes</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa fa-home"></i>Terrenos <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/proyecto/nuevo">Registro De Proyectos</a></li>
+                            <li><a href="/tipo/nuevo">Registro De Tipos de Terreno</a></li>
+                            <li><a href="/map">Registro De Terrenos</a></li>
                             <li><a href="#">Resgistro De Planes</a></li>
+                            <li><a href="/proyecto">Lista De Proyectos</a></li>
+                            <li><a href="/tipo">Lista De Tipos de Terreno</a></li>
+                            <li><a href="#">Lista De Terrenos</a></li>
                             <li><a href="#">Lista De Planes</a></li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-credit-card"></i>Venta De Terrenos <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="#">Venta De Terrenos</a></li>
+                            <li><a href="#">lista De Ventas</a></li>
+                            <li><a href="#">Reportes Del Dia</a></li>
                         </ul>
                     </li>
                 </ul>

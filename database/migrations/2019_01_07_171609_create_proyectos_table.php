@@ -17,7 +17,7 @@ class CreateProyectosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->longText('imagen');
-            $table->text('descripcion');
+            $table->longtext('descripcion');
 
             $table->timestamps();
         });

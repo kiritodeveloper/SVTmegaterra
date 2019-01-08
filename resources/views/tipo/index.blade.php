@@ -27,11 +27,9 @@
                                     <div class="cuadrado" style="background:{{ $tipo->color }}"></div>
                             </td>
                            <td>
-                                <form action="{{ route('users.destroy', $tipo) }}" method="POST">
+                                <form action="{{ route('tipos.destroy', $tipo) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
-                                    <a href="{{ route('users.show', $tipo) }}" class="btn btn-round btn-warning"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                    <a href="{{ route('users.edit', $tipo) }}" class="btn btn-round btn-success"><span class="glyphicon glyphicon-edit"></span></a>
                                     <button type="submit" class="btn btn-round btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                                 </form>
                             </td> 

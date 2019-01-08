@@ -30,7 +30,7 @@ class TipoController extends Controller
      */
     public function create()
     {
-        //
+        return view('tipo.create');
     }
 
     /**
@@ -41,7 +41,11 @@ class TipoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->all();
+        $new=new Tipo(request()->all());
+        //dd($new);
+        $new->save();
+        return redirect()->route('tipo.index');
     }
 
     /**
@@ -84,8 +88,9 @@ class TipoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tipo $tipos)
     {
-        //
+        $tipos->delete();
+        return redirect()->route('tipo.index');
     }
 }

@@ -29,7 +29,7 @@ class ProyectoController extends Controller
      */
     public function create()
     {
-        //
+        return view('proyecto.create');
     }
 
     /**
@@ -40,7 +40,11 @@ class ProyectoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->all();
+        $new=new Proyecto(request()->all());
+        //dd($new);
+        $new->save();
+        return redirect()->route('proyecto.index');
     }
 
     /**

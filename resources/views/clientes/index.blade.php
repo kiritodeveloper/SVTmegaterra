@@ -43,7 +43,7 @@
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-round btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                                     <a href="{{ route('clientes.edit', $cliente) }}" class="btn btn-round btn-success"><span class="glyphicon glyphicon-edit"></span></a>
-                                </form>                           
+                            </form>                           
                     </div>
                 </div>
     

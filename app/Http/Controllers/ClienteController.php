@@ -46,18 +46,6 @@ class ClienteController extends Controller
         $data = request()->all();
         
         $new=new Cliente(request()->all());
-        //dd($new);
-        // $file=$request->file("avatar");
-        // $base64=base64_encode($file);
-        // $nombre=date("Y_m_d H_i_s").$file->getClientOriginalName();
-        // Storage::disk('local')->put($nombre,\File::get($file));
-        // dd(Storage::disk('local'));
-        // $n1= file_get_contents(public_path().$nombre);
-        // //Storage::disk('local')->put(,\File::get($file));
-        // $n2=base64_encode($n1);
-        // dd($n2);
-        // $new->avatar=$base64;
-        // dd($base64);
         
         $new->save();
         /*Cliente::create([
