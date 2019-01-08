@@ -62,6 +62,13 @@ return [
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+        'local' => [
+        
+        'driver' => 'local',
+        
+        'root' => public_path().'/public/uploads/avatars',
+        
+        ],
 
     ],
 

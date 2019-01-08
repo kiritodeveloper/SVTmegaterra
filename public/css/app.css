@@ -14051,7 +14051,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 .card.hovercard .cardheader {
   background: url("/images/fondo.jpg");
   background-size: cover;
-  height: 135px;
+  height: 60px;
 }
 
 .card.hovercard .avatar {
@@ -14097,3 +14097,49 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 }
 
 /*formuarios*/
+/*Font-awesome integration*/
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Google font integration*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#contact{
+    background-color:#f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact .well{
+    margin-top:30px;
+    border-radius:0;
+}
+
+#contact .form-control{
+    border-radius: 0;
+    border:2px solid #1e1e1e;
+}
+
+#contact button{
+    border-radius:0;
+    border:2px solid #1e1e1e;
+}
+
+#contact .row{
+    margin-bottom:30px;
+}
+
+@media (max-width: 768px) { 
+    #contact iframe {
+        margin-bottom: 15px;
+    }
+    
+}
+
+/*figuras*/
+.cuadrado {
+  width:5vh;
+  max-width:100px;
+  height:5vh;
+  max-height:100px;
+  position:relative;
+  border-radius: 50em;
+  
+}

@@ -7,6 +7,8 @@ use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
+use Symfony\Component\HttpKernel\Client;
+use Illuminate\Support\Facades\Storage;
 class ClienteController extends Controller
 {
     /**
@@ -42,7 +44,23 @@ class ClienteController extends Controller
     public function store(Request $request)
     {   
         $data = request()->all();
-        Cliente::create([
+        
+        $new=new Cliente(request()->all());
+        //dd($new);
+        $file=$request->file("avatar");
+        $base64=base64_encode($file);
+        $nombre=date("Y_m_d H_i_s").$file->getClientOriginalName();
+        Storage::disk('local')->put($nombre,\File::get($file));
+        dd(Storage::disk('local'));
+        $n1= file_get_contents(public_path().$nombre);
+        //Storage::disk('local')->put(,\File::get($file));
+        $n2=base64_encode($n1);
+        dd($n2);
+        $new->avatar=$base64;
+        dd($base64);
+        
+        $new->save();
+        /*Cliente::create([
             'ci' => $data['ci'],
             'nombre'=> $data['nombre'],
             'apellidos'=> $data['apellidos'],
@@ -52,7 +70,7 @@ class ClienteController extends Controller
             'direccion'=> $data['direccion'],
             'telefono'=> $data['telefono'],
             'avatar'=>$data['avatar'],
-        ]);
+        ]);*/
         return redirect()->route('clientes.index');
     }
 

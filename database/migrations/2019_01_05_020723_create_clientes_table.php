@@ -23,7 +23,7 @@ class CreateClientesTable extends Migration
             $table->string('estado_civil')->nullable();
             $table->string('direccion')->nullable();
             $table->string('telefono')->nullable();
-            $table->string('avatar')->default('default.jpg');
+            $table->longText('avatar');
             $table->rememberToken();
             $table->timestamps();
         });

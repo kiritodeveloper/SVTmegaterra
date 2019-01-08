@@ -1,6 +1,8 @@
 <?php
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,4 +77,14 @@ Route::group(['middleware'=>'auth'],function (){
     Route::get('/cli/{cliente}/editar', 'ClienteController@edit')->name('clientes.edit');
 
     Route::delete('/cli/{clientes}', 'ClienteController@destroy')->name('clientes.destroy');
+
+
+    Route::get('/practica',function(){
+        return view('practica.index');
+    });
+    
 });
+
+Route::get('/proyecto','ProyectoController@index')->name('proyecto.index');
+
+Route::get('/tipo','TipoController@index')->name('tipo.index');
