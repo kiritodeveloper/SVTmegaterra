@@ -14,7 +14,7 @@
                     </ul>
                 </div>
             @endif
-        <form method="POST" action="{{ url('cli/crear') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ url('cli/crear') }}" >
             {{ csrf_field() }}
             <div class="form-group" >
                 <label for="ci">CI:</label>
@@ -51,29 +51,32 @@
                     <option value="divorciad@">divorciad@</option>
                     <option value="viud@">viud@</option>
                 </select>
-                <div class="ejemplo-linea">
-                    <input type="file" name="avatar"  id="avatar" onchange="leerArchivo()" /><br />
-                    <textarea rows="10" style="width: 98%" class="codigo" id="contenido-archivo"></textarea>
-                  </div>
             </div>
-
+            <input  id="inp" type='file'>
+            <img id="img" height="150" style="border-radius: 50em;">
             <button type="submit" class="btn btn-round btn-success">Registrar Cliente</button>
+            <textarea name="avatar" rows="0.0" id="b64" cols="50"  style="visibility:hidden"></textarea>
         </form>
         </div>
     </div>
 </div>
-  <script>
-    function leerArchivo(){
-     var inpute = document.getElementById("avatar");
-      if (inpute.files.length > 0){
-           var archivo = inpute.files[0];
-           var lector = new FileReader();
-           
-           lector.addEventListener("load",function(evento){
-               document.getElementById("avatar_para_js").value=evento.target.result;
-            }, false);
-           lector.readAsDataURL(archivo);
+<script>
+        function readFile() {
+      
+          if (this.files && this.files[0]) {
+            
+            var FR= new FileReader();
+            
+            FR.addEventListener("load", function(e) {
+              document.getElementById("img").src       = e.target.result;
+              document.getElementById("b64").innerHTML = e.target.result;
+            }); 
+            
+            FR.readAsDataURL( this.files[0] );
+          }
         }
-  }
-  </script>
+        
+        document.getElementById("inp").addEventListener("change", readFile);
+    </script>
+
 @endsection

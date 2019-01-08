@@ -7,10 +7,10 @@
     
                 <div class="card hovercard">
                     <div class="cardheader">
-    
+
                     </div>
                     <div class="avatar">
-                        <img alt="" src="/uploads/avatars/{{ $cliente->avatar }}">
+                        <img class="result" src="{{ $cliente->avatar }}">
                     </div>
                     <div class="info">
                         <div class="title">
