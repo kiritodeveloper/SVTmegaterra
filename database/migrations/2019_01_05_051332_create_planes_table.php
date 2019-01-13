@@ -15,6 +15,9 @@ class CreatePlanesTable extends Migration
     {
         Schema::create('planes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
+            $table->enum('tipo plan', ['anual', 'trimestral','bimestral','semanal'])->default('anual');
+            $table->string('cuota inicial');
             $table->timestamps();
         });
     }
