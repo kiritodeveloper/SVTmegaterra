@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://viglino.github.io/ol-ext/examples/interaction/map.interaction.undoredo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+
+  Copyright (c) 2015-2018 Jean-Marc VIGLINO, 
+  released under CeCILL-B (french BSD like) licence: http://www.cecill.info/
+  
+-->
+  <title>ol-ext: Undo/redo</title>
+  
+
+  <meta name="description" content="ol.interaction.UndoRedo is an interaction to handle undo on a map.">
+  <meta name="keywords" content="ol, openlayers, undo, interaction">
+
+  <link rel="stylesheet" href="./ol-ext_ Undo_redo_files/style.css">
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="./ol-ext_ Undo_redo_files/jquery-1.11.0.min.js.descarga"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="./ol-ext_ Undo_redo_files/font-awesome.min.css">
+  
+  <!-- Openlayers -->
+  <link rel="stylesheet" href="./ol-ext_ Undo_redo_files/ol.css">
+  <script type="text/javascript" src="./ol-ext_ Undo_redo_files/ol.js.descarga"></script>
+  <script src="./ol-ext_ Undo_redo_files/polyfill.min.js.descarga"></script>
+  
+  <!-- ol-ext -->
+  <link rel="stylesheet" href="./ol-ext_ Undo_redo_files/ol-ext.css">
+  <script type="text/javascript" src="./ol-ext_ Undo_redo_files/ol-ext.js.descarga"></script>
+
+  <style>
+    .ol-button i {
+      color: inherit;
+    }
+    .ol-button.red button,
+    .ol-button.green button,
+    .ol-button.blue button {
+      color: #f00;
+      background-color: currentColor;
+      border: 2px solid currentColor;
+      width: 1em;
+      height: 1em;
+      border-radius: 0;
+    }
+    .ol-button.green button {
+      color: #0f0;
+    }
+    .ol-button.blue button {
+      color: #00f;
+    }
+    .ol-button.red button:hover,
+    .ol-button.green button:hover,
+    .ol-button.blue button:hover {
+      background-color: currentColor!important;
+      border-color: #000;
+    }
+  </style>
+
+</head>
+<body>
+  <a href="https://github.com/Viglino/ol-ext" class="icss-github-corner"><i></i></a>
+
+  <a href="http://viglino.github.io/ol-ext/index.html">
+    <h1>ol-ext: Undo/redo</h1>
+  </a>
+  <div class="info">
+    <p>
+      <i>ol/interaction/UndoRedo</i> is an interaction to handle undo/redo on a map.
+    </p>
+    <p>
+      <span class="experimental">Experimental</span>
+      this feature is still in progress and may be buggy.
+    </p>
+    <p>
+      Just add the interaction to the map to get it working.
+      It will watch all vector sources and all interactions in the map.
+      Use the <i>undo</i> and <i>redo</i> method to undo the last recorded operations.
+      <br>
+      Undo can be stacked in a block to make them undoing at a time. 
+      Just enclose the operation between a <i>blockStart()</i> and <i>blockEnd()</i>.
+    </p>
+    Cancelable operations:
+    <ul>
+      <li>
+        <b>ol/source/Vector</b> 
+        <i>addFeature</i> / <i>removeFeature</i> / <i>clear</i>
+        <br>
+        The core <i>clear</i> function has been overwritten to fires 
+        a <i>clearstart</i> and <i>clearend</i> event
+      </li>
+    </ul>
+    <br>
+    Cancelable interactions:
+    <ul>
+      <li>
+        <b>ol/interaction/Draw</b> (ol core interaction)
+      </li>
+      <li>
+        <a href="http://viglino.github.io/ol-ext/examples/interaction/map.interaction.modifyfeature.html">
+          <b>ol/interaction/ModifyFeature</b> 
+        </a>
+        The core <i>ol/interaction/Modify</i> has been rewritten to handle modification 
+        start / end events
+        (see <a href="http://viglino.github.io/ol-ext/examples/interaction/map.interaction.modifyfeature.html">example</a>)
+      </li>
+      <li>
+        <b>ol/interaction/Delete</b>
+      </li>
+      <li>
+        <a href="http://viglino.github.io/ol-ext/examples/interaction/map.interaction.drawhole.html">
+          <b>ol/interaction/DrawHole</b>
+        </a>
+      </li>
+      <li>
+        <a href="http://viglino.github.io/ol-ext/examples/interaction/map.interaction.transform.html">
+          <b>ol/interaction/Transform</b>
+        </a>
+      </li>
+      <li>
+        <a href="http://viglino.github.io/ol-ext/examples/interaction/map.interaction.split.html">
+          <b>ol/interaction/Split</b>
+        </a>
+      </li>
+      <li>
+        <a href="http://viglino.github.io/ol-ext/examples/interaction/map.interaction.offset.html">
+          <b>ol/interaction/Offset</b>
+        </a>
+      </li>
+      <li>
+        <b>ol/interaction/FillAttribute</b>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Map div -->
+  <div id="map" style="width:600px; height:400px;"><div class="ol-viewport" data-view="3" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" width="600" height="400" style="width: 100%; height: 100%; display: block;"></canvas><div class="ol-overlaycontainer"></div><div class="ol-overlaycontainer-stopevent"><div class="ol-zoom ol-unselectable ol-control"><button class="ol-zoom-in" type="button" title="Zoom in">+</button><button class="ol-zoom-out" type="button" title="Zoom out">−</button></div><div class="ol-rotate ol-unselectable ol-control ol-hidden"><button class="ol-rotate-reset" type="button" title="Reset rotation"><span class="ol-compass" style="transform: rotate(0rad);">⇧</span></button></div><div class="ol-attribution ol-unselectable ol-control ol-uncollapsible"><ul><li>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</li></ul><button type="button" title="Attributions"><span>»</span></button></div><div class="ol-unselectable ol-control ol-bar"><div class="ol-unselectable ol-control ol-bar ol-editbar"><div class="ol-selection ol-toggle ol-button ol-unselectable ol-control ol-active"><button type="button" title="Select"></button><div class="ol-unselectable ol-control ol-bar ol-option-bar"><div class="ol-delete ol-button ol-unselectable ol-control"><button type="button" title="Delete"></button></div></div></div><div class="ol-drawpoint ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Point"></button></div><div class="ol-drawline ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="LineString"></button><div class="ol-unselectable ol-control ol-bar ol-option-bar"><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title="delete last point">undo</div></div><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title="finish">finish</div></div></div></div><div class="ol-drawpolygon ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Polygon"></button><div class="ol-unselectable ol-control ol-bar ol-option-bar"><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title="undo last point">undo</div></div><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title="finish">finish</div></div></div></div><div class="ol-drawhole ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Hole"></button><div class="ol-unselectable ol-control ol-bar ol-option-bar"><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title="undo last point">undo</div></div><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title="finish">finish</div></div></div></div><div class="ol-drawregular ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Regular"></button><div class="ol-unselectable ol-control ol-bar ol-option-bar"><div class=" ol-text-button ol-button ol-unselectable ol-control"><div title=""><div><div></div>4 pts<div></div></div></div></div></div></div><div class="ol-transform ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Transform"><i></i></button></div><div class="ol-split ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Split"></button></div><div class="ol-offset ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="Offset"><i></i></button></div><div class="ol-toggle ol-button ol-unselectable ol-control"><button type="button" title="fill color attribut"><i class="fa fa-paint-brush"></i></button><div class="ol-unselectable ol-control ol-bar ol-option-bar"><div class="red ol-button ol-unselectable ol-control"><button type="button"></button></div><div class="green ol-button ol-unselectable ol-control"><button type="button"></button></div><div class="blue ol-button ol-unselectable ol-control"><button type="button"></button></div></div></div></div><div class="ol-unselectable ol-control ol-bar ol-group"><div class=" ol-button ol-unselectable ol-control"><button type="button" title="undo..."><i class="fa fa-undo"></i></button></div><div class=" ol-button ol-unselectable ol-control"><button type="button" title="redo..."><i class="fa fa-repeat"></i></button></div></div></div></div></div></div>
+
+  <div class="options">
+    <div id="info"></div>
+  </div>
+
+  <script type="text/javascript">
+
+    //  Vector layer
+    var vector = new ol.layer.Vector( { 
+      source: new ol.source.Vector(),
+      style: function (f) {
+        return new ol.style.Style({
+          image: new ol.style.Circle({
+            radius: 5,
+            stroke: new ol.style.Stroke({ width: 1.5, color: [255,128,0] }),
+            fill: new ol.style.Fill({ color: [255,128,0,.3] })
+          }),
+          stroke: new ol.style.Stroke({ width: 2.5, color: f.get('color') || [255,128,0] }),
+          fill: new ol.style.Fill({ color: (f.get('color') || [255,128,0]).concat([.3]) })
+        })
+      }
+    })
+
+    // The map
+    var map = new ol.Map ({
+        target: 'map',
+        view: new ol.View ({
+          zoom: 14,
+          center: [270701, 6247637]
+        }),
+        layers: [
+          new ol.layer.Tile({ source: new ol.source.OSM() }),
+          vector
+        ]
+      });
+
+
+    // Main control bar
+    var mainbar = new ol.control.Bar();
+    map.addControl(mainbar);
+
+    // Editbar
+    var editbar = new ol.control.EditBar ({
+      source: vector.getSource(),
+      interactions: { Info: false }
+    });
+    mainbar.addControl(editbar);
+
+    // Add a fill interaction toset color attribute
+    var fill = new ol.interaction.FillAttribute({}, { color: [255,0,0] });
+    editbar.addControl(new ol.control.Toggle({
+      html: '<i class="fa fa-paint-brush"></i>',
+      title: 'fill color attribut',
+      interaction: fill,
+      bar: new ol.control.Bar({
+        controls:[ 
+          new ol.control.Button({
+            className: 'red',
+            handleClick: function(){
+              fill.setAttribute('color', [255,0,0])
+            }
+          }),
+          new ol.control.Button({
+            className: 'green',
+            handleClick: function(){
+              fill.setAttribute('color', [0,255,0])
+            }
+          }),
+          new ol.control.Button({
+            className: 'blue',
+            handleClick: function(){
+              fill.setAttribute('color', [0,0,255])
+            }
+          })
+        ]
+      })
+    }));
+
+    // Undo redo interaction
+    var undoInteraction = new ol.interaction.UndoRedo();
+    map.addInteraction(undoInteraction);
+    // Prevent selection of a deleted feature
+    undoInteraction.on('undo', function(e) {
+      if (e.action.type === 'addfeature') {
+        editbar.getInteraction('Select').getFeatures().clear();
+        editbar.getInteraction('Transform').select();
+      }
+    });
+
+    // Add buttons to the bar
+    var bar = new ol.control.Bar({ 
+      group: true,
+      controls: [
+        new ol.control.Button({
+          html: '<i class="fa fa-undo" ></i>',
+          title: 'undo...',
+          handleClick: function() {
+            undoInteraction.undo();
+          }
+        }),
+        new ol.control.Button({
+          html: '<i class="fa fa-repeat" ></i>',
+          title: 'redo...',
+          handleClick: function() {
+            undoInteraction.redo();
+          }
+        })
+      ]
+    });
+    mainbar.addControl(bar);
+
+    // Add a snap
+    map.addInteraction(new ol.interaction.Snap({ 
+      source: vector.getSource() 
+    }));
+
+  </script>
+
+
+</body></html>

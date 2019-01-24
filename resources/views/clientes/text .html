@@ -1,0 +1,27 @@
+<script>
+var seleccion=0
+function copia()
+{
+ jaimito=document.getElementById("juanito")
+ if (seleccion==1) 
+  {
+  if (jaimito.value=="") jaimito.value=document.selection.createRange().text
+  else jaimito.value=jaimito.value+','+document.selection.createRange().text;
+  seleccion=0
+  }
+ else alert("seleccione una palabra")
+}
+</script>
+
+<textarea name="pepito" rows="5" cols="45" onselect="seleccion=1">
+esto es una prueba
+en un lugar de la mancha
+viento en popa a toda vela
+vivia un simpatico niño al que todos llamaban
+simbad el marino
+</textarea>
+
+<input onclick="copia()" type="button" value="Copia">
+
+<p>
+<textarea name="juanito" rows="4" cols="45"></textarea>
