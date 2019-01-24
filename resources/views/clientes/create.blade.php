@@ -78,10 +78,10 @@
                             <input type="date" name="fecha_nacimiento">
                             <label for="estado_civil">SEXO</label>
                             <select name="estado_civil">
-                                <option value="solter@">solter@</option>
-                                <option value="casad@">casad@</option>
-                                <option value="divorciad@">divorciad@</option>
-                                <option value="viud@">viud@</option>
+                                <option value="solter@">soltero</option>
+                                <option value="casad@">casado</option>
+                                <option value="divorciad@">divorciado</option>
+                                <option value="viud@">viudo</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-round btn-success">Registrar Cliente</button>
@@ -92,7 +92,7 @@
                     <div class="row">   
                         <div class="col-md-12"> 
                             <center>
-                            <label> Imgen de Camara</label>
+                            <label> Imagen de Camara</label>
                                 <div id="video-container">
                                     <video width="200px" height="200px" muted="muted" id="video"></video>
                                 </div>
@@ -102,7 +102,7 @@
                     <div class="row">   
                         <div class="col-md-12"> 
                             <center>
-                            <label> Imgen de Cargada</label>
+                            <label> Imagen de Cargada</label>
                             <br>    
                                 <img id="img" src="{{asset('images/img.jpg')}}" width="150px" height="150px">        
                             </center>    
