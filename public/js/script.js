@@ -133,7 +133,8 @@ const llenarSelectConDispositivosDisponibles = () => {
 					 //Esta es la foto, en base 64
 					// document.getElementById("foto").innerHTML = e.target.result;
 					 //alert(foto);
-					 document.getElementById("resultado").innerHTML = foto;
+					 document.getElementById("b64").innerHTML = foto;
+					 document.getElementById("img").src       = foto;
 					 var image = new Image();
 					 image.src = foto;
 					 //document.getElementById("aaa").innerHTML = image;

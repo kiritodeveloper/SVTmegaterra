@@ -11,5 +11,5 @@
     <!-- App Css -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     @stack('header-scripts')
-
+	@stack("style")
 </head>
