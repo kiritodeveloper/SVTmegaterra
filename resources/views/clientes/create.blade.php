@@ -78,10 +78,10 @@
                             <input type="date" name="fecha_nacimiento">
                             <label for="estado_civil">SEXO</label>
                             <select name="estado_civil">
-                                <option value="solter@">soltero</option>
-                                <option value="casad@">casado</option>
-                                <option value="divorciad@">divorciado</option>
-                                <option value="viud@">viudo</option>
+                                <option value="soltero">soltero</option>
+                                <option value="casado">casado</option>
+                                <option value="divorciado">divorciado</option>
+                                <option value="viudo">viudo</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-round btn-success">Registrar Cliente</button>
