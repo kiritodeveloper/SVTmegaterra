@@ -35,15 +35,14 @@
 <div class="col-md-6">
 	<div>
 		<select name="listaDeDispositivos" id="listaDeDispositivos"></select>
-		<button id="boton">Tomar foto</button>
+		<button id="boton" class="btn btn-round btn-success">Tomar foto</button>
 		<p id="estado"></p>
 	</div>
 	<br>
     {{--  <textarea name="documento" rows="0.0" id="resultado" cols="50"  ></textarea>  --}}
     <div id="video-container">
-        <video width="320" height="240" muted="muted" id="video" ></video>
+        <video width="320" height="240" muted="muted" id="video"></video>
     </div>
-	
 	<canvas id="canvas" style="display: none;"></canvas>
 </div>
 <script src="{{asset('js/script.js')}}"></script>
