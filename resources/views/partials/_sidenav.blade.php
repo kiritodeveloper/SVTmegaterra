@@ -16,7 +16,7 @@
         <!-- menu profile quick info -->
         <div class="profile">
             <div class="profile_pic">
-                <img src="/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="{{asset('images/img.jpg')}}"  alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>Bienvenido</span>
@@ -36,21 +36,21 @@
                     </li>-->
                     <li><a><i class="fa fa fa-group"></i> Administracion <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="/cli/nuevo">Registro De Clientes</a></li>
-                            <li><a href="/usuarios/nuevo"> Registro De Usuarios</a></li>
-                            <li><a href="/usuarios"> Listar Usuarios</a></li>
-                            <li><a href="/cli">Lista de clientes</a></li>
+                            <li><a href="{{route('clientes.create')}}">Registro De Clientes</a></li>
+                            <li><a href="{{ route('users.create') }}"> Registro De Usuarios</a></li>
+                            <li><a href="{{ route('users.index') }}"> Listar Usuarios</a></li>
+                            <li><a href="{{ route('clientes.index') }}">Lista de clientes</a></li>
                             
                         </ul>
                     </li>
                     <li><a><i class="fa fa fa-home"></i>Terrenos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="/proyecto/nuevo">Registro De Proyectos</a></li>
-                            <li><a href="/tipo/nuevo">Registro De Tipos de Terreno</a></li>
-                            <li><a href="/map">Registro De Terrenos</a></li>
+                            <li><a href="{{ route('proyecto.create') }}">Registro De Proyectos</a></li>
+                            <li><a href="{{ route('tipo.create') }}">Registro De Tipos de Terreno</a></li>
+                            <li><a href="{{ route('map.index') }}">registro de terrenos</a></li>
                             <li><a href="#">Resgistro De Planes</a></li>
-                            <li><a href="/proyecto">Lista De Proyectos</a></li>
-                            <li><a href="/tipo">Lista De Tipos de Terreno</a></li>
+                            <li><a href="{{ route('proyecto.index') }}">Lista De Proyectos</a></li>
+                            <li><a href="{{ route('tipo.index') }}">Lista De Tipos de Terreno</a></li>
                             <li><a href="#">Lista De Terrenos</a></li>
                             <li><a href="#">Lista De Planes</a></li>
                         </ul>

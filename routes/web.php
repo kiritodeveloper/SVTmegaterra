@@ -29,9 +29,8 @@ Route::group(['middleware'=>'auth'],function (){
     Route::get('dashboard','HomeController@index')->name('dashboard');
 
 
-    Route::get('/map',function(){
-        return view('map.map');
-    });
+
+    Route::get('/map','MapController@index')->name('map.index');
     
         /*
         |--------------------------------------------------------------------------
@@ -65,8 +64,6 @@ Route::group(['middleware'=>'auth'],function (){
         return view('clientes.create');
     });
     
-    
-    
     Route::get('/cli', 'ClienteController@index')
         ->name('clientes.index');
     
@@ -75,6 +72,7 @@ Route::group(['middleware'=>'auth'],function (){
     Route::post('/cli/crear','ClienteController@store');
 
     Route::get('/cli/{cliente}/editar', 'ClienteController@edit')->name('clientes.edit');
+    Route::put('/cli/{cliente}', 'ClienteController@update');
 
     Route::delete('/cli/{clientes}', 'ClienteController@destroy')->name('clientes.destroy');
 

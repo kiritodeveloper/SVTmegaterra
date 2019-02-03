@@ -94,7 +94,13 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = request()->all();
+        dd($data);
+        
+        $request->update($data);
+
+        return redirect()->route('clientes.index', ['clientes' => $data]);
+        
     }
 
     /**

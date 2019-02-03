@@ -372,7 +372,7 @@ class ComposerStaticInit83e2b03c9566100dfba5a97a888fb233
     );
 
     public static $classMap = array (
-        'App\\Cliente' => __DIR__ . '/../..' . '/app/Cliente.php',
+        'App\\Cliente' => __DIR__ . '/../..' . '/app/cliente.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -381,6 +381,7 @@ class ComposerStaticInit83e2b03c9566100dfba5a97a888fb233
         'App\\Http\\Controllers\\ClienteController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClienteController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\MapController' => __DIR__ . '/../..' . '/app/Http/Controllers/MapController.php',
         'App\\Http\\Controllers\\ProyectoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProyectoController.php',
         'App\\Http\\Controllers\\TipoController' => __DIR__ . '/../..' . '/app/Http/Controllers/TipoController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',

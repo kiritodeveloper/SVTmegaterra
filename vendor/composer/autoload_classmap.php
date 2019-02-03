@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Cliente' => $baseDir . '/app/Cliente.php',
+    'App\\Cliente' => $baseDir . '/app/cliente.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -15,6 +15,7 @@ return array(
     'App\\Http\\Controllers\\ClienteController' => $baseDir . '/app/Http/Controllers/ClienteController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\MapController' => $baseDir . '/app/Http/Controllers/MapController.php',
     'App\\Http\\Controllers\\ProyectoController' => $baseDir . '/app/Http/Controllers/ProyectoController.php',
     'App\\Http\\Controllers\\TipoController' => $baseDir . '/app/Http/Controllers/TipoController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
