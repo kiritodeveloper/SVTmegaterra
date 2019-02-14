@@ -16,23 +16,22 @@
     <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" style="background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-        background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-        background-position-x: initial;
-        background-position-y: initial;
-        background-size: initial;
-        background-repeat-x: initial;
-        background-repeat-y: initial;
-        background-attachment: initial;
-        background-origin: initial;
-        background-clip: initial;
-        background-color: initial;" >
+        <div class="right_col">
             <div class="page-title">
                 <div class="title_left">
                     <h3>@yield('title')</h3>
                 </div>
 
-
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="clearfix"></div>
             <div class="data-pjax">
@@ -46,9 +45,8 @@
 </div>
 
 
-
+@include('partials._footer')
 <script src="{{asset('js/app.js')}}"></script>
-
 @include('partials._notification')
 @stack('scripts')
 

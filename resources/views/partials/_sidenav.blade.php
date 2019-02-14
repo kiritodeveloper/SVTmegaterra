@@ -1,15 +1,5 @@
 <div class="col-md-3 left_col">
-    <div class="left_col scroll-view" style="background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;">
+    <div class="left_col scroll-view">
 
         <div class="clearfix"></div>
 

@@ -10,17 +10,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-    background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
   margin: 0;
 }
 article,
@@ -1093,7 +1082,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
@@ -1114,7 +1102,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #f1f3f5;
+  color: #23527c;
   text-decoration: underline;
 }
 a:focus {
@@ -1198,7 +1186,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: #000;
+  color: inherit;
 }
 h1 small,
 h2 small,
@@ -1349,7 +1337,7 @@ mark,
   color: #777;
 }
 .text-primary {
-  color: #f7fafc;
+  color: #337ab7;
 }
 a.text-primary:hover,
 a.text-primary:focus {
@@ -1480,7 +1468,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted rgb(243, 238, 238);
+  border-bottom: 1px dotted #777;
 }
 .initialism {
   font-size: 90%;
@@ -1619,9 +1607,6 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-.well well-sm{
-  color: #transparent;
 }
 .row {
   margin-right: -15px;
@@ -2587,7 +2572,7 @@ output {
 }
 .form-control::-moz-placeholder {
   color: #999;
-  
+  opacity: 1;
 }
 .form-control:-ms-input-placeholder {
   color: #999;
@@ -2993,7 +2978,6 @@ select[multiple].input-lg {
   margin-right: -15px;
   margin-left: -15px;
 }
-
 @media (min-width: 768px) {
   .form-horizontal .control-label {
     padding-top: 7px;
@@ -9724,17 +9708,6 @@ html , body{
     max-width: 180px;
 }
 .nav-sm .main_container .top_nav {
-    background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
     display: block;
     margin-left: 70px;
     z-index: 2
@@ -9872,8 +9845,9 @@ html , body{
 }
 .nav_menu {
     float: left;
-    border-bottom: 1px;
-    margin-bottom: 1px;
+    background: #EDEDED;
+    border-bottom: 1px solid #D9DEE4;
+    margin-bottom: 10px;
     width: 100%;
     position: relative
 }
@@ -9882,7 +9856,7 @@ html , body{
         position: static
     }
 }
-.nav-md .container.body .col-md-3.left_col {  
+.nav-md .container.body .col-md-3.left_col {
     min-height: 100%;
     width: 230px;
     padding: 0;
@@ -10020,17 +9994,6 @@ body .container.body .right_col {
     color: #fff
 }
 .container {
-    background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
     width: 100%;
     padding: 0
 }
@@ -10048,17 +10011,7 @@ body .container.body .right_col {
 }
 body {
     color: #73879C;
-    background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
+    background: #2A3F54;
     font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -10079,12 +10032,10 @@ body {
 .page-title .title_left {
     width: 45%;
     float: left;
-    display: block;
-    color: rgb(12, 12, 12);
+    display: block
 }
 .page-title .title_left h3 {
-    margin: 9px 0;
-    color: rgb(10, 10, 10);
+    margin: 9px 0
 }
 .page-title .title_right {
     width: 55%;
@@ -10219,7 +10170,7 @@ h3,
     margin-bottom: 10px
 }
 a {
-    color: rgb(246, 249, 252);
+    color: #5A738E;
     text-decoration: none
 }
 a,
@@ -10314,18 +10265,7 @@ a:focus {
     padding-left: 36px
 }
 .nav-md ul.nav.child_menu li:before {
-
-    linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
+    background: #425668;
     bottom: auto;
     content: "";
     height: 8px;
@@ -10379,13 +10319,10 @@ a:focus {
 .nav li li.current-page a {
     color: #fff
 }
-
 .nav.side-menu>li.active>a {
-    text-shadow: #000;
-    background:  none;
-    box-shadow: none;
-
-    
+    text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
+    background: linear-gradient(#334556, #2C4257), #2A3F54;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0
 }
 .navbar-brand,
 .navbar-nav>li>a {
@@ -10521,17 +10458,16 @@ footer {
     text-align: center
 }
 .jqstooltip {
-    background: rgb(9, 33, 58) !important;
+    background: #34495E !important;
     width: 30px !important;
     height: 22px !important;
     text-decoration: none
 }
 .tooltip {
-    opacity: 0.1;
     display: block !important
 }
 .tiles {
-    border-top: 1px solid rgb(192, 17, 17);
+    border-top: 1px solid #ccc;
     margin-top: 15px;
     padding-top: 5px;
     margin-bottom: 0
@@ -10645,16 +10581,16 @@ h2 {
     margin-bottom: 10px;
     padding: 10px 17px;
     display: inline-block;
-    background: #transparent;
+    background: #fff;
     border: 1px solid #E6E9ED;
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
     opacity: 1;
-    transition: all .2s ease;
+    transition: all .2s ease
 }
 .x_title {
-    border-bottom: 2px solid #0000;
+    border-bottom: 2px solid #E6E9ED;
     padding: 1px 5px 6px;
     margin-bottom: 10px
 }
@@ -10682,7 +10618,7 @@ h2 {
     width: 100%;
     float: left;
     clear: both;
-    margin-top: 5px;
+    margin-top: 5px
 }
 .x_content h4 {
     font-size: 16px;
@@ -10944,7 +10880,7 @@ table.jambo_table tbody tr.selected td {
 }
 table.dataTable th.focus,
 table.dataTable td.focus {
-    outline: 2px solid rgb(12, 12, 12) !important;
+    outline: 2px solid #1ABB9C !important;
     outline-offset: -1px
 }
 table.display {
@@ -11450,15 +11386,14 @@ h4.graph_title {
     -moz-background-clip: padding;
     border-radius: 5px;
     background-clip: padding-box;
-    background: rgb(255, 255, 255);
-    transition: all 300ms ease-in-out;
-
+    background: #FFF;
+    transition: all 300ms ease-in-out
 }
 .tile-stats:hover .icon i {
     animation-name: transformAnimation;
     animation-duration: .5s;
     animation-iteration-count: 1;
-    color: #100F0F;
+    color: rgba(58, 58, 58, 0.41);
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     -webkit-animation-name: transformAnimation;
@@ -11475,7 +11410,7 @@ h4.graph_title {
 .tile-stats .icon {
     width: 20px;
     height: 20px;
-    color: #100F0F;
+    color: #BAB8B8;
     position: absolute;
     right: 53px;
     top: 22px;
@@ -11494,11 +11429,8 @@ h4.graph_title {
     line-height: 1.65857
 }
 .tile-stats .count,
-.tile-stats h3{
-  color: #84CF89;
-}
+.tile-stats h3,
 .tile-stats p {
-    color: #84CF89;
     position: relative;
     margin: 0;
     margin-left: 10px;
@@ -13066,9 +12998,7 @@ form:after {
     visibility: hidden
 }
 .login_content {
-    background-color: #DDDBDC;
     margin: 0 auto;
-    opacity: 0.75;
     padding: 25px 0 0;
     position: relative;
     text-align: center;
@@ -13351,7 +13281,7 @@ fieldset {
 .cropper .docs-buttons>.btn-group,
 .cropper .docs-buttons>.form-control {
     margin-right: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 .cropper .docs-toggles>.btn,
 .cropper .docs-toggles>.btn-group,
@@ -13851,295 +13781,4 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 #nprogress .spinner-icon {
     border-top-color: #f4505d !important;
     border-left-color: #f4505d !important;
-}
-/*section clientes*/
-
-
-.card {
-  padding-top: 20px;
-  margin: 10px 0 20px 0;
-  background-color: rgba(214, 224, 226, 0.2);
-  border-top-width: 0;
-  border-bottom-width: 2px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.card .card-heading {
-  padding: 0 20px;
-  margin: 0;
-}
-
-.card .card-heading.simple {
-  font-size: 20px;
-  font-weight: 300;
-  color: #777;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.card .card-heading.image img {
-  display: inline-block;
-  width: 46px;
-  height: 46px;
-  margin-right: 15px;
-  vertical-align: top;
-  border: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.card .card-heading.image .card-heading-header {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.card .card-heading.image .card-heading-header h3 {
-  margin: 0;
-  font-size: 14px;
-  line-height: 16px;
-  color: #262626;
-}
-
-.card .card-heading.image .card-heading-header span {
-  font-size: 12px;
-  color: #999999;
-}
-
-.card .card-body {
-  padding: 0 20px;
-  margin-top: 20px;
-}
-
-.card .card-media {
-  padding: 0 20px;
-  margin: 0 -14px;
-}
-
-.card .card-media img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.card .card-actions {
-  min-height: 30px;
-  padding: 0 20px 20px 20px;
-  margin: 20px 0 0 0;
-}
-
-.card .card-comments {
-  padding: 20px;
-  margin: 0;
-  background-color: #f8f8f8;
-}
-
-.card .card-comments .comments-collapse-toggle {
-  padding: 0;
-  margin: 0 20px 12px 20px;
-}
-
-.card .card-comments .comments-collapse-toggle a,
-.card .card-comments .comments-collapse-toggle span {
-  padding-right: 5px;
-  overflow: hidden;
-  font-size: 12px;
-  color: #999;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-comments .media-heading {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.card.people {
-  position: relative;
-  display: inline-block;
-  width: 170px;
-  height: 300px;
-  padding-top: 0;
-  margin-left: 20px;
-  overflow: hidden;
-  vertical-align: top;
-}
-
-.card.people:first-child {
-  margin-left: 0;
-}
-
-.card.people .card-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 170px;
-  height: 150px;
-  background-color: #ffffff;
-}
-
-.card.people .card-top.green {
-  background-color: #53a93f;
-}
-
-.card.people .card-top.blue {
-  background-color: #427fed;
-}
-
-.card.people .card-info {
-  position: absolute;
-  top: 150px;
-  display: inline-block;
-  width: 100%;
-  height: 101px;
-  overflow: hidden;
-  background: #ffffff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.card.people .card-info .title {
-  display: block;
-  margin: 8px 14px 0 14px;
-  overflow: hidden;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #404040;
-}
-
-.card.people .card-info .desc {
-  display: block;
-  margin: 8px 14px 0 14px;
-  overflow: hidden;
-  font-size: 12px;
-  line-height: 16px;
-  color: #737373;
-  text-overflow: clip;
-}
-
-.card.people .card-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  padding: 10px 20px;
-  line-height: 29px;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.card.hovercard {
-  position: relative;
-  padding-top: 0;
-  overflow: hidden;
-  text-align: center;
-  background-color: rgba(214, 224, 226, 0.2);
-}
-
-.card.hovercard .cardheader {
-  background: url("/images/fondo.jpg");
-  background-size: cover;
-  height: 60px;
-}
-
-.card.hovercard .avatar {
-  position: relative;
-  top: -50px;
-  margin-bottom: -50px;
-}
-
-.card.hovercard .avatar img {
-  width: 100px;
-  height: 100px;
-  max-width: 100px;
-  max-height: 100px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.5);
-}
-
-.card.hovercard .info {
-  padding: 4px 8px 10px;
-}
-
-.card.hovercard .info .title {
-  margin-bottom: 4px;
-  font-size: 24px;
-  line-height: 1;
-  color: #fff;
-  vertical-align: middle;
-}
-
-.card.hovercard .info .desc {
-  overflow: hidden;
-  font-size: 12px;
-  line-height: 20px;
-  color: #FFF;
-  text-overflow: ellipsis;
-}
-
-.card.hovercard .bottom {
-  padding: 0 20px;
-  margin-bottom: 17px;
-}
-
-/*formuarios*/
-/*Font-awesome integration*/
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-/*Google font integration*/
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-#contact{
-    background-color:#f1f1f1;
-    font-family: 'Roboto', sans-serif;
-}
-
-#contact .well{
-    margin-top:30px;
-    border-radius:0;
-}
-
-#contact .form-control{
-    border-radius: 0;
-    border:2px solid #1e1e1e;
-}
-
-#contact button{
-    border-radius:0;
-    border:2px solid #1e1e1e;
-}
-
-#contact .row{
-    margin-bottom:30px;
-}
-
-@media (max-width: 768px) { 
-    #contact iframe {
-        margin-bottom: 15px;
-    }
-    
-}
-
-/*figuras*/
-.cuadrado {
-  width:5vh;
-  max-width:100px;
-  height:5vh;
-  max-height:100px;
-  position:relative;
-  border-radius: 50em;
-  
 }

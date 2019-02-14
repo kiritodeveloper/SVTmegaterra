@@ -5,17 +5,7 @@
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
             </div>
 
-            <ul class="nav navbar-nav navbar-right" style="background: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-            background-image: linear-gradient(to right, rgb(19, 78, 94), rgb(113, 178, 128));
-            background-position-x: initial;
-            background-position-y: initial;
-            background-size: initial;
-            background-repeat-x: initial;
-            background-repeat-y: initial;
-            background-attachment: initial;
-            background-origin: initial;
-            background-clip: initial;
-            background-color: initial;" >
+            <ul class="nav navbar-nav navbar-right" >
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <img src="/images/img.jpg" alt="">{{auth()->user()->name}}
