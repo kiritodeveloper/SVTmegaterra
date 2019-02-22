@@ -1,0 +1,54 @@
+.fancyasientomayorer td, .fancyLascom  th {
+	border-width: 0px 1px 1px 1px;
+	background-color: #eef2f9;
+	box-shadow: 0 0 0 1px #fff inset;
+	-webkit-box-shadow: 0 0 0 1px #fff inset;
+	-moz-box-shadow: 0 0 0 1px #fff inset;
+	}
+
+.fancyasientomayorer {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+.fancyasientomayorer tbody tr:hover td{
+    color: #261F1D;
+    background-color: #8ffc04;
+}
+
+.fancyasientomayorer tbody tr td {
+	color: #000;
+	background-color: #f7fafa;
+	font-size: 11px;
+	padding: 6px 12px 6px 12px;
+    cursor: pointer;
+	}
+
+.fancyasientomayorer thead tr th,
+.fancyasientomayorer thead tr td,
+.fancyasientomayorer tfoot tr th, 
+.fancyasientomayorer tfoot tr td {
+	background-color: #000f5e;
+	border: 1px solid #000f5e;
+	font-size: 12px;
+	font-weight: bold;
+	border-collapse: separate;
+	padding: 6px 12px 6px 12px;
+	color: white;
+    cursor: pointer;
+	}
+
+.fancyasientomayorer thead tr {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.fancyasientomayorer tbody {
+  display: block;
+  overflow:scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 160px;
+}
+.fancyasientomayorer{
+	color: #794044;
+}

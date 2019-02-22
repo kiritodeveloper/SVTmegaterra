@@ -1,0 +1,93 @@
+.fancySuma td, .fancySuma  th {
+	border-width: 0px 1px 1px 1px;
+	background-color: #eef2f9;
+	box-shadow: 0 0 0 1px #fff inset;
+	-webkit-box-shadow: 0 0 0 1px #fff inset;
+	-moz-box-shadow: 0 0 0 1px #fff inset;
+}
+
+.fancySuma tbody tr:hover td{
+    color: #FF0000;
+    background-color: #ffff00;
+    padding: 2px 4px 2px 4px;
+    cursor: pointer;
+}
+.fancySuma tbody tr.odd:hover td {
+	color: #FF0000;
+    background-color: #ffff00;
+    padding: 2px 4px 2px 4px;
+    cursor: pointer;
+}
+
+.fancySuma tbody tr.even:hover td {
+	color: #FF0000;
+    background-color: #ffff00;
+    padding: 2px 4px 2px 4px;
+    cursor: pointer;
+}
+
+.fancySuma tbody tr td {
+	background-color: #f6f9fa;
+	border: 1px solid #b9b3ff;
+	font-size: 11px;
+	padding: 2px 4px 2px 4px;
+	color: #000000;
+    cursor: pointer;
+}
+
+.fancySuma tbody tr.odd td {
+	font-size: 11px;
+	background-color: #f6f9fa;
+	padding: 2px 4px 2px 4px;
+	color: #000000;
+    cursor: pointer;
+}
+
+.fancySuma tbody tr.even td {
+	font-size: 11px;
+	background-color: #f6f9fa;
+	padding: 2px 4px 2px 4px;
+	color: #000000;
+    cursor: pointer;
+}
+
+.fancySuma thead tr th,
+.fancySuma thead tr td,
+.fancySuma tfoot tr th, 
+.fancySuma tfoot tr td {
+	background-color: #191970;
+	border: 1px solid #191970;
+	font-size: 11px;
+	font-weight: bold;
+	border-collapse: separate;
+	padding: 3px 6px 3px 6px;
+	color: #F8F8FF;
+    cursor: pointer;
+    background-image: -moz-linear-gradient(
+		top,
+		rgba(255,255,255,0.4) 0%,
+		rgba(255,255,255,0.2) 50%,
+		rgba(255,255,255,0.1) 51%,
+		rgba(255,255,255,0.0) 100%);
+	
+	background-image: -webkit-gradient(
+		linear, left top, left bottom,
+		color-stop(0%,rgba(255,255,255,0.4)),
+		color-stop(50%,rgba(255,255,255,0.2)),
+		color-stop(51%,rgba(255,255,255,0.1)),
+		color-stop(100%,rgba(255,255,255,0.0)));
+}
+
+.fancySuma thead tr {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.fancySuma tbody {
+  display: block;
+  overflow:scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 320px;
+  background-color: #f7f7f7;
+}

@@ -1,0 +1,82 @@
+.cotization td, .cotization  th {
+  border-width: 0px 1px 1px 1px;
+  background-color: #eef2f9;
+  box-shadow: 0 1px 10px #000000;
+  -webkit-box-shadow: 0 0 0 1px #fff inset;
+  padding: 3px;
+  }
+
+.cotization {
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+.cotization tbody tr:hover td{
+    box-shadow: 0 1px 10px #000000;
+    color: #3f3d3d;
+    cursor: pointer;
+}
+.cotization tbody tr.odd:hover td {
+  box-shadow: 0 1px 10px #000000;
+  color: #261F1D;
+  cursor: pointer;
+}
+
+.cotization tbody tr.even:hover td {
+  box-shadow: 0 1px 10px #000000;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  }
+
+.cotization tbody tr td {
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3f3d3d;
+  }
+
+.cotization tbody tr.odd td {
+  box-shadow: 0 1px 10px #000000;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.cotization tbody tr.even td {
+  box-shadow: 0 1px 10px #000000;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.cotization thead tr th,
+.cotization thead tr td,
+.cotization tfoot tr th, 
+.cotization tfoot tr td {
+  background:#063266;
+  border: 1px solid black;
+  font-size: 12px;
+  box-shadow: 4px 4px 4px 0px #000000;
+  cursor: pointer; 
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  padding: 7px 10px 7px 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.cotization thead tr {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.cotization tbody {
+  display: block;
+  overflow:scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}

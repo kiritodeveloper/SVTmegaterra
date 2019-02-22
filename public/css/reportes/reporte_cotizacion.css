@@ -1,0 +1,80 @@
+html {
+    font-size: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 4px !important;
+    margin: 4px !important;
+    line-height: 15px;
+    font-style: normal;
+    font-weight: normal;
+    min-height: 100%;
+}
+
+h1, h2, h3, h5, h6 {    
+    margin: 2px;
+    font-family: sans-serif, 'Palatino Linotype', 'Book Antiqua', serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+h4{    
+    font-family: sans-serif, 'Palatino Linotype', 'Book Antiqua', serif;
+    color: #000000;
+    margin: 1px;
+    font-size: 12px;
+	font-weight: bold;
+}
+.bold {
+    font-weight: 700;
+}
+
+.text-dark {
+	font-family: sans-serif, 'Palatino Linotype', 'Book Antiqua', serif;
+    color: #292828;
+    font-weight: bold;
+}
+.text-muted {
+    color: #282828;
+    font-size: 12px;
+}
+
+.table.invoice-table > thead > tr {
+    color: #000000;
+}
+
+.invoice-table > thead > tr > td > h4 {
+    color: #000000;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.invoice-table > tbody > tr > td {
+    color: #000000;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-size: 11px;
+  	padding: 1px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.invoice-table, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}

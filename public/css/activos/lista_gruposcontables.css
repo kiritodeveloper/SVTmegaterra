@@ -1,0 +1,93 @@
+.fancyCompra td, .fancyCompra  th {
+	border-width: 0px 1px 1px 1px;
+	background-color: #f29fb8;
+	box-shadow: 0 0 0 1px #fff inset;
+	padding: 2px;
+	}
+.highlight{
+    background-color: red !important;
+}
+.fancyCompra tbody tr.highlight td {
+    color: #261F1D;
+    background-color: #7fffd4;
+}
+.fancyCompra tbody tr.odd.highlight td {
+	color: #261F1D;
+    background-color: #7fffd4;
+	}
+.fancyCompra tbody tr.even.highlight td {
+	color: #261F1D;
+    background-color: #7fffd4;
+	}
+.fancyCompra {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+.fancyCompra tbody tr:hover td{
+    color: #261F1D;
+    background-color: #ffff00;
+}
+.fancyCompra tbody tr.odd:hover td {
+	color: #261F1D;
+    background-color: #ffff00;
+	}
+
+.fancyCompra tbody tr.even:hover td {
+	color: #261F1D;
+    background-color: #ffff00;
+	}
+
+.fancyCompra tbody tr td {
+	color: #261F1D;
+	background-color: #f5f5f5;
+	font-size: 10px;
+	padding: 5px 5px 0px 5px;
+	cursor: pointer;
+	}
+
+.fancyCompra tbody tr.odd td {
+	color: #261F1D;
+	font-size: 10px;
+	padding: 5px 5px 0px 5px;
+	background-color: #f5f5f5;
+	cursor: pointer;
+	}
+
+.fancyCompra tbody tr.even td {
+	color: #261F1D;
+	padding: 5px 5px 0px 5px;
+	font-size: 10px;
+	background-color: #f5f5f5;
+	cursor: pointer;
+	}
+
+.fancyCompra thead tr th,
+.fancyCompra thead tr td,
+.fancyCompra tfoot tr th, 
+.fancyCompra tfoot tr td {
+	background-color: #66cccc;
+	font-size: 11px;
+	font-weight: bold;
+	border-color: #660707 #660707 #5e0f0d;  
+	border-collapse: separate;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+	padding: 3px 5px 3px 5px;
+	color: #191919;
+    cursor: pointer;
+	}
+
+.fancyCompra thead tr {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.fancyCompra tbody {
+  background-color: #ebdbfa;
+  display: block;
+  overflow:scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 180px;
+}
+.sortheader{
+	color: #794044;
+}
