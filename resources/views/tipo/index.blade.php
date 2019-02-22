@@ -3,6 +3,16 @@
 @section('title', 'Lista De Tipos De Terrrenos')
 
 @section('content')
+<style type="text/css">
+    .cuadrado {
+          width:25%;
+          height:0;
+          padding-top:25%;
+          position:relative;
+          background:red;
+          border-radius: 25px;
+        }
+</style>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="x_panel">

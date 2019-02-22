@@ -41,8 +41,8 @@
                             <li><a href="#">Resgistro De Planes</a></li>
                             <li><a href="{{ route('proyecto.index') }}">Lista De Proyectos</a></li>
                             <li><a href="{{ route('tipo.index') }}">Lista De Tipos de Terreno</a></li>
-                            <li><a href="#">Lista De Terrenos</a></li>
-                            <li><a href="#">Lista De Planes</a></li>
+                            <li><a href="">Lista De Terrenos</a></li>
+                            <li><a href="{{route('tipo.index')}}">Lista De Planes</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-credit-card"></i>Venta De Terrenos <span class="fa fa-chevron-down"></span></a>
