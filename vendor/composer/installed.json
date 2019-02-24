@@ -909,6 +909,66 @@
         "description": "Highlight PHP code in terminal"
     },
     {
+        "name": "jeremykenedy/laravel-roles",
+        "version": "v1.3.0",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jeremykenedy/laravel-roles.git",
+            "reference": "142a8587d39f9dd9057ea6e89463843a797e2fc9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jeremykenedy/laravel-roles/zipball/142a8587d39f9dd9057ea6e89463843a797e2fc9",
+            "reference": "142a8587d39f9dd9057ea6e89463843a797e2fc9",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*",
+            "php": ">=5.6.4"
+        },
+        "time": "2018-09-07T06:04:40+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "jeremykenedy\\LaravelRoles\\RolesServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "jeremykenedy\\LaravelRoles\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Roman Bičan",
+                "email": "romanbican@seznam.cz"
+            },
+            {
+                "name": "Jeremy Kenedy",
+                "email": "jeremykenedy@gmail.com"
+            },
+            {
+                "name": "Ultraware"
+            }
+        ],
+        "description": "Powerful package for handling roles and permissions in Laravel. Supports Laravel 5.3, 5.4, and 5.5",
+        "keywords": [
+            "acl",
+            "laravel",
+            "levels",
+            "permissions",
+            "roles"
+        ]
+    },
+    {
         "name": "laravel/framework",
         "version": "v5.5.44",
         "version_normalized": "5.5.44.0",
@@ -2465,7 +2525,8 @@
         "keywords": [
             "mock",
             "xunit"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "prettus/l5-repository",

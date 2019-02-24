@@ -15,6 +15,7 @@
                             <th scope="col">n</th>
                             <th scope="col">Nombre Completo</th>
                             <th scope="col">Correo</th>
+                            <th scope="col">Estado</th>
                             <th scope="col">Acciones</th>
                         </tr>
                         </thead>
@@ -24,6 +25,7 @@
                             <th scope="row" style="color: #000;" >{{ $user->id }}</th>
                             <td style="color: #000;">{{ $user->name }}</td>
                             <td style="color: #000;">{{ $user->email }}</td>
+                            <td style="color: #000;">{{ $user->estado }}</td>
                             <td>
                                 <form action="{{ route('users.destroy', $user) }}" method="POST">
                                     {{ csrf_field() }}

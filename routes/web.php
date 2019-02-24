@@ -80,6 +80,11 @@ Route::group(['middleware'=>'auth'],function (){
     Route::get('/practica',function(){
         return view('practica.index');
     });
+
+    Route::resource('roles', 'Core\RoleController');
+    Route::get("roles_usuario/{id}",'Core\RoleController@usuarios');
+    Route::patch('permission/{role}', 'Api\DataController@storePermission')->name('permission.store');
+
     
 });
 
@@ -95,3 +100,4 @@ Route::get('/tipo/nuevo', 'TipoController@create')->name('tipo.create');
     
 Route::post('/tipo/crear','TipoController@store');
 Route::delete('/tipo/{tipos}', 'TipoController@destroy')->name('tipos.destroy');
+
